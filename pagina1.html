@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página 1</title>
+    <script>
+        function validar() {
+            let nome = document.getElementById("nome").value;
+
+            if (nome == "") {
+                documet.getElementById("nome").focus;
+                documet.getElementById("avisos").innerHTML = "Campo nome não pode ficar em branco.";
+                return false;
+            }
+
+            else {
+                return true;
+            }
+        }
+    </script>
 </head>
 <body>
-    <form>
+    <div id="avisos" style="color:brown;"></div> <br>
+    <form onsubmit="return validar()">
         Nome: <br>
         <input type="text" name="nome" id="nome"> <br><br>
 
